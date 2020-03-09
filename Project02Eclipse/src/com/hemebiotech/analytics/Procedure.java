@@ -19,8 +19,10 @@ public class Procedure {
 	public void Event() {
 		
 		
-		List<String> test = new ReadSymptomDataFromFile("symptoms.txt").GetSymptoms();
-		Set<String> suite = new AlphabeticalOrder().AnalysisAlphabet(test);
+		List<String> symptomsFromFile = new ReadSymptomDataFromFile("symptoms.txt").GetSymptoms();
+		Set<String> symptomsInOrder = new AlphabeticalOrder().AnalysisAlphabet(symptomsFromFile);
+		new WriteCountBySymptom().Writer(symptomsInOrder, symptomsFromFile);
 		
+		System.out.println("a file result.out has been generated");	//message printed in console at the end of the program
 	}
 }
