@@ -5,9 +5,9 @@ import java.util.Set;
 import java.util.TreeSet;
 
 /**
- * 
- * @author hfx28
  * Set the line from the file read in alphabetical order
+ * @author hfx28
+ * 
  */
 public class AlphabeticalOrder {
 

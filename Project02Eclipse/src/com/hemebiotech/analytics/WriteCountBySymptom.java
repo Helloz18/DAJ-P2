@@ -7,9 +7,9 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * 
- * @author hfx28
  * create a file to list the symptoms with their number of occurrences
+ * @author hfx28
+ * 
  */
 
 public class WriteCountBySymptom {

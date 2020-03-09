@@ -4,7 +4,11 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-
+/**
+ * Correction of the first version of AnalyticsCounter
+ * @author hfx28
+ *
+ */
 
 public class AnalyticsCounter {
 	private static int headacheCount = 0;	

@@ -4,9 +4,9 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * 
- * @author hfx28
  * Procedure is the Class for the organization of the program
+ * @author hfx28
+ * 
  */
 
 public class Procedure {
