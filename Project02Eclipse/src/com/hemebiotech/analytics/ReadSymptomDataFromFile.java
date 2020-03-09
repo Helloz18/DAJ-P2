@@ -37,7 +37,9 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 				}
 				reader.close();
 			} catch (IOException e) {
-				e.printStackTrace();
+				//e.printStackTrace();
+				System.out.println("Le fichier symptoms.txt est introuvable.");
+				System.exit(0);
 			}
 		}
 		
