@@ -1,7 +1,8 @@
 package com.hemebiotech.analytics;
 
 import java.util.List;
-import java.util.Set;
+import java.util.Map;
+
 
 /**
  * Procedure is the Class for the organization of the program
@@ -13,16 +14,16 @@ public class Procedure {
 	
 
 	/**
-	 * In Event we find the list of methods used and in which order
+	 * In event we find the list of methods used and in which order
 	 */
 
-	public void Event() {
+	public void event() {
 		
 		
-		List<String> symptomsFromFile = new ReadSymptomDataFromFile("symptoms.txt").GetSymptoms();
-		Set<String> symptomsInOrder = new AlphabeticalOrder().AnalysisAlphabet(symptomsFromFile);
-		new WriteCountBySymptom().Writer(symptomsInOrder, symptomsFromFile);
-		
-		System.out.println("a file result.out has been generated");	//message printed in console at the end of the program
+		List<String> symptomsFromFile = new ReadSymptomDataFromFile("symptoms.txt").getSymptoms();
+		Map<String,Integer>count=new CountOccurrences().countSymptoms(symptomsFromFile);
+		Map<String, Integer> symptomsInOrder = new AlphabeticalOrder().analysisAlphabet(count);
+		new WriteCountBySymptom().writer(symptomsInOrder);
+		System.out.println("a file result.out has been generated");	
 	}
 }

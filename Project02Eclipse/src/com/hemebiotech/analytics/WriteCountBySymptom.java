@@ -2,9 +2,7 @@ package com.hemebiotech.analytics;
 
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Collections;
-import java.util.List;
-import java.util.Set;
+import java.util.Map;
 
 /**
  * create a file to list the symptoms with their number of occurrences
@@ -16,20 +14,19 @@ public class WriteCountBySymptom {
 	
 	/**
 	 * 
-	 * @param symptoms : to get the list of symptoms in alphabetical order
-	 * @param fileRead : to get the number of occurrences of each symptom
+	 * @param symptomsInOrder : to get the symptoms in alphabetical order obtained by analysisAlphabet method from AlphabeticalOrder Class
+	 * 
 	 */
 
-	public void Writer(Set<String> symptoms, List<String> fileRead) {
+	public void writer(Map<String, Integer> symptomsInOrder) {
 
 		try {
 			FileWriter writer = new FileWriter ("result.out");
-
-			for (String symptom : symptoms) {
-				
-				writer.write(symptom + " : " + Collections.frequency(fileRead, symptom) + "\n");
-			}
 			
+			for(Map.Entry<String,Integer> symptom : symptomsInOrder.entrySet()) {
+				writer.write(symptom.getKey() + " : " + symptom.getValue() +"\n");
+			}
+						
 			writer.close();
 
 		} catch (IOException e) {

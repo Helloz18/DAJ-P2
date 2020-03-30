@@ -1,8 +1,7 @@
 package com.hemebiotech.analytics;
 
-import java.util.List;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.Map;
+import java.util.TreeMap;
 
 /**
  * Set the line from the file read in alphabetical order
@@ -13,13 +12,13 @@ public class AlphabeticalOrder {
 
 	/**
 	 * 
-	 * @param fileRead is the result obtained from method GetSymptom() from Class ReadSymptomDataFromFile
-	 * @return symptoms : TreeSet of each symptom in alphabetical order
+	 * @param count is the result obtained from method countSymptoms from CountOccurrences class
+	 * @return symptoms : TreeMap of each symptom in alphabetical order
 	 */
 	
-	public Set<String> AnalysisAlphabet(List<String> fileRead) {
+	public Map<String, Integer> analysisAlphabet(Map<String, Integer> count) {
 		
-			Set<String> symptoms = new TreeSet<String>(fileRead);
+			Map<String, Integer> symptoms = new TreeMap<String, Integer>(count);
 							
 		return symptoms;
 		
