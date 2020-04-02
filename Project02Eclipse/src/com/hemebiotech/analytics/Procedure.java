@@ -21,7 +21,7 @@ public class Procedure {
 		
 		
 		List<String> symptomsFromFile = new ReadSymptomDataFromFile("symptoms.txt").getSymptoms();
-		Map<String,Integer>count=new CountOccurrences().countSymptoms(symptomsFromFile);
+		Map<String,Integer> count = new CountOccurrences().countSymptoms(symptomsFromFile);
 		Map<String, Integer> symptomsInOrder = new AlphabeticalOrder().analysisAlphabet(count);
 		new WriteCountBySymptom().writer(symptomsInOrder);
 		System.out.println("a file result.out has been generated");	

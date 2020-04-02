@@ -4,7 +4,7 @@ import java.util.Map;
 import java.util.TreeMap;
 
 /**
- * Set the line from the file read in alphabetical order
+ * Set the String from the Map in alphabetical order
  * @author hfx28
  * 
  */
