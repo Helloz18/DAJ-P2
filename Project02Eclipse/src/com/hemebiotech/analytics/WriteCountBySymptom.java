@@ -10,14 +10,15 @@ import java.util.Map;
  * 
  */
 
-public class WriteCountBySymptom {
+public class WriteCountBySymptom implements ISymptomWriter {
 	
 	/**
 	 * 
 	 * @param symptomsInOrder : to get the symptoms in alphabetical order obtained by analysisAlphabet method from AlphabeticalOrder Class
 	 * 
 	 */
-
+	
+	@Override
 	public void writer(Map<String, Integer> symptomsInOrder) {
 
 		try {

@@ -1,4 +1,4 @@
-Sample project for OpenClassroom's fundamentals of Java
+Heme Biotech - trends analysis
 =======================================================
 
 JDK : JDK-12.0.2
